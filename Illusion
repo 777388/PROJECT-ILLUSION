@@ -1,0 +1,14 @@
+import importlib.util
+import urllib.request
+import requests
+
+def import_code_from_website(url, api_key=None):
+    if api_key is None:
+        api_key = input("Please enter your API key: ")
+    headers = {"Authorization": f"Bearer {api_key}"}
+    response = requests.get(url, headers=headers)
+    code = response.text
+    spec = importlib.util.spec_from_loader("module_name", loader=None)
+    module = importlib.util.module_from_spec(spec)
+    exec(code, module.__dict__)
+    return module
