@@ -3,7 +3,7 @@ Python Module Creator to hide your actual code offsite, only accessible from wit
 
 in order to implement this in your code you need to add in a few things
 
-import illusion
+import Illusion
 
 ·("url to hosted page")
 
