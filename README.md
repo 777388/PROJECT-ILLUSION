@@ -1,5 +1,5 @@
 # PROJECT-ILLUSION
-Python Module Creator to hide your actual code offsite, and then import it into code.
+Python Module Creator to hide your actual code offsite, only accessible from within the program, and then import it into code.
 
 in order to implement this in your code you need to add in a few things
 
