@@ -2,10 +2,8 @@ import importlib.util
 import urllib.request
 import requests
 
-def import_code_from_website(url, api_key=None, program_name=None):
+def import_code_from_website(url, program_name=None):
     headers = {}
-    if api_key:
-        headers["Authorization"] = f"Bearer {api_key}"
     if program_name:
         headers["X-Program-Name"] = program_name
     response = requests.get(url, headers=headers)
