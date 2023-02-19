@@ -6,6 +6,7 @@ import requests
 def ·(url):
     headers = {}
     program_name = sys.argv[0]
+    headers["X-Program-Name"] = program_name
     response = requests.get(url, headers=headers)
     code = response.text
     spec = importlib.util.spec_from_loader("module_name", loader=None)
