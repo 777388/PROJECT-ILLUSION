@@ -1,0 +1,15 @@
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+@app.route('/example_endpoint', methods=['POST'])
+def example_handler():
+    # check if the X-Program-Name header is present and matches the expected value
+    if request.headers.get('X-Program-Name') == 'MyCustomProgram':
+        # process the request
+        # place actual code in here
+        # return the response
+        return jsonify({'message': 'Request processed successfully'})
+    else:
+        # reject the request
+        return jsonify({'error': 'Unauthorized request'}), 401
