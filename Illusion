@@ -1,11 +1,11 @@
 import importlib.util
 import urllib.request
+import sys
 import requests
 
 def import_code_from_website(url, program_name=None):
     headers = {}
-    if program_name:
-        headers["X-Program-Name"] = program_name
+    program_name = sys.argv[0]
     response = requests.get(url, headers=headers)
     code = response.text
     spec = importlib.util.spec_from_loader("module_name", loader=None)
