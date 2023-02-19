@@ -2,10 +2,12 @@ import importlib.util
 import urllib.request
 import requests
 
-def import_code_from_website(url, api_key=None):
-    if api_key is None:
-        api_key = input("Please enter your API key: ")
-    headers = {"Authorization": f"Bearer {api_key}"}
+def import_code_from_website(url, api_key=None, program_name=None):
+    headers = {}
+    if api_key:
+        headers["Authorization"] = f"Bearer {api_key}"
+    if program_name:
+        headers["X-Program-Name"] = program_name
     response = requests.get(url, headers=headers)
     code = response.text
     spec = importlib.util.spec_from_loader("module_name", loader=None)
