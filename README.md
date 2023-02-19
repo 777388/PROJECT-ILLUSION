@@ -8,4 +8,6 @@ import Illusion
 ·("url to hosted page")
 
 
-This is all you have to put in your code, to allow your programs to be hidden from reverse engineers. You can also set further limitations restricting access from certain countries to that page, or only allowing certain IP's through from serverside
+This is all you have to put in your python program, to allow your programs to be hidden from reverse engineers. You can also set further limitations restricting access from certain countries to that page, or only allowing certain IP's through from serverside
+
+Be sure the actual code is actually hosted on the Url you choose!!!
