@@ -3,7 +3,7 @@ import urllib.request
 import sys
 import requests
 
-def ·(url, program_name=None):
+def ·(url):
     headers = {}
     program_name = sys.argv[0]
     response = requests.get(url, headers=headers)
